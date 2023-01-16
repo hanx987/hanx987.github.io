@@ -1,6 +1,6 @@
 # 🍥 Fuji 🍥
 
-Fuji is a minimal Hugo theme with full dark mode support and GitHub Primer markdown style.
+简单的 Hugo 主题，支持夜间模式，Markdown 样式来自 GitHub Primer。
 
 ![GitHub release](https://img.shields.io/github/v/release/dsrkafuu/hugo-theme-fuji)
 ![GitHub build status](https://img.shields.io/github/workflow/status/dsrkafuu/hugo-theme-fuji/pages)
@@ -8,92 +8,90 @@ Fuji is a minimal Hugo theme with full dark mode support and GitHub Primer markd
 
 [English](https://github.com/dsrkafuu/hugo-theme-fuji#readme) | [简体中文](https://github.com/dsrkafuu/hugo-theme-fuji/blob/master/README_CN.md)
 
-> Checkout the brand new [VSCode Aofuji Light Theme](https://github.com/dsrkafuu/vscode-theme-aofuji) which has similar color scheme to [Aofuji](https://github.com/dsrkafuu/hugo-template-aofuji)!
+> 介绍一个全新的亮色 VSCode 主题 [Aofuji Light Theme](https://github.com/dsrkafuu/vscode-theme-aofuji)，它的配色方案继承自 [Aofuji](https://github.com/dsrkafuu/hugo-template-aofuji)！
 
-Supported languages: `cs`, `de`, `en`, `eo`, `fr`, `ja`, `nl`, `pl`, `pt-pt`, `zh-hans`, `zh-hant`. Check the i18n folder to add more languages.
+支持的 i18n 语言：`cs`, `de`, `en`, `eo`, `fr`, `ja`, `nl`, `pl`, `pt-pt`, `zh-hans`, `zh-hant`。i18n 文件夹内为所有语言文件。
 
-## 📑 Table of contents
+## 目录
 
-- [💻 Live demos](#-live-demos)
-- [❗ Notice](#-notice)
-- [🐣 Getting started](#-getting-started)
-- [🆕 Update the theme](#-update-the-theme)
-- [⚙️ Configuration](#%EF%B8%8F-configuration)
-  - [🎨 Favicon](#-favicon)
-  - [❌ License, toc and comments](#-license-toc-and-comments)
-  - [🎵 APlayer](#-aplayer)
-  - [📐 Render LaTeX with KaTex](#-render-latex-with-katex)
-  - [📷 Image zoom and lazyload settings](#-image-zoom-and-lazyload-settings)
-  - [⚓ Markdown render hook](#-markdown-render-hook)
-  - [📨 Comments area](#-comments-area)
-  - [🔧 Custom stylesheet configuration](#-custom-stylesheet-configuration)
-- [✏️ Issue and contributing](#%EF%B8%8F-issue-and-contributing)
+- [💻 在线 Demo](#-在线-demo)
+- [❗ 注意事项](#-注意事项)
+- [🐣 开始使用](#-开始使用)
+- [🆕 更新主题](#-更新主题)
+- [⚙️ 自定义设置](#%EF%B8%8F-自定义设置)
+  - [🎨 站点图标](#-站点图标)
+  - [❌ License、目录和评论区](#-license目录和评论区)
+  - [🎵 文章音乐](#-文章音乐)
+  - [📐 LaTeX 渲染](#-latex-渲染)
+  - [📷 图片放大的设置和 lazyload](#-图片放大的设置和-lazyload)
+  - [⚓ Markdown 钩子](#-markdown-钩子)
+  - [📨 评论区](#-评论区)
+  - [🔧 自定义 CSS](#-自定义-css)
+- [👓 批判一番和贡献代码](#-批判一番和贡献代码)
 - [📝 License](#-license)
 - [🤝 Annotations](#-annotations)
 
-## 💻 Live demos
+## 💻 在线 Demo
 
-[**Live Demo (GitHub Pages)**](https://github.dsrkafuu.net/hugo-theme-fuji/)
+[**Live Demo (gohugo.io)**](https://themes.gohugo.io/theme/hugo-theme-fuji/)
 
-![Screenshot of Fuji](https://raw.githubusercontent.com/dsrkafuu/hugo-theme-fuji/master/images/screenshot.png)
+![Fuji 截图](https://raw.githubusercontent.com/dsrkafuu/hugo-theme-fuji/master/images/screenshot.png)
 
-## ❗ Notice
+## ❗ 注意事项
 
-Remember to add [summary divider](https://gohugo.io/content-management/summaries/#manual-summary-splitting) `<!--more-->` to your post `.md` files to show blockquotes, links and codes with proper style in list pages' summary part.
+记得给文章添加 [简介分隔线](https://gohugo.io/content-management/summaries/#manual-summary-splitting) `<!--more-->`，以让文章列表的文章预览部分样式正确。
 
-## 🐣 Getting started
+## 🐣 开始使用
 
-Inside the folder of your Hugo site run:
+添加主题：
 
 ```bash
 git submodule add https://github.com/dsrkafuu/hugo-theme-fuji.git themes/fuji
 ```
 
-For more information read the official [setup guide](https://gohugo.io/overview/installing/) of Hugo.
+其他的可以看[官方指南](https://gohugo.io/overview/installing/)。
 
-Then copy the `config.toml` in the `exampleSite` to the root of your Hugo site, and use it as a reference for your config file. **It contains all of the settings for site menus, search pages and other features, you'll need this file to make your site work properly.**
+然后把 `exampleSite` 复制出来，并修改 `config.toml` 即可。注意这个文件内包含了所有使站点正常工作所需的配置项 (比如搜索页面的配置)，因此将其当作参考是一个比较好的选择。
 
-## 🆕 Update the theme
+## 🆕 更新主题
 
-You can watch (release only) this repo to receive update notifications.
-
-Inside the folder of your Hugo site run:
+可以 watch (release only) 这个 repo 来接收更新信息，master 分支不会频繁改动。
 
 ```bash
 git submodule update --remote --merge
 ```
 
-## ⚙️ Configuration
+## ⚙️ 自定义设置
 
-### 🎨 Favicon
+### 🎨 站点图标
 
-Create `[SITEROOT]/layouts/partials/favicon.html` to cover theme's favicon.
+使用 `[SITEROOT]/layouts/partials/favicon.html` 来覆盖主题自带的图标。
 
-You can generate your favicons in [realfavicongenerator.net](https://realfavicongenerator.net/).
+可以在 [realfavicongenerator.net](https://realfavicongenerator.net/) 快速创建自己的图标。
 
-### ❌ License, toc and comments
+### ❌ License、目录和评论区
 
-Globally in `config.toml`:
-
-```toml
-showLicense = true # Enable or disable license for all post
-showToc = true # Enable or disable ToC for all post
-```
-
-Or in posts' front matter:
+在全局的 `config.toml` 里设置：
 
 ```toml
-showLicense = true # Enable or disable license for this specific post
-showToc = true # Enable or disable ToC for this specific post
+showLicense = true # 对所有文章开关 License 显示
+showToc = true # 对所有文章开关目录显示
 ```
 
-To disable comment area for specific post, add this in front matter:
+在特定文章的 front matter 里设置：
 
 ```toml
-showComments = false # Do not show comments in this post
+showLicense = true # 对这篇文章开关 License 显示
+showToc = true # 对这篇文章开关目录显示
 ```
 
-### 🎵 APlayer
+除此之外你也可以关闭特定文章的评论：
+
+```toml
+showComments = false # 对这篇文章关闭评论
+```
+
+### 🎵 文章音乐
 
 In-post APlayer supported, you use the `aplayer` shortcode:
 
@@ -103,7 +101,7 @@ In-post APlayer supported, you use the `aplayer` shortcode:
 
 Checkout the `exampleSite/content/post/aplayer-test.md` for more example usage such as using multiple files.
 
-### 📐 Render LaTeX with KaTex
+### 📐 LaTeX 渲染
 
 You can write LaTeX directly in markdown with escape characters:
 
@@ -142,36 +140,36 @@ Inline style:
 
 Don't forget to add `math = true` in your front matter or `config.toml`.
 
-### 📷 Image zoom and lazyload settings
+### 📷 图片放大的设置和 lazyload
 
-Zoomable, not lazyloaded:
+可放大，非 lazyload：
 
 ```markdown
 ![Alt text](test/example.png)
 ```
 
-Zoomable, lazyloaded:
+可放大，lazyload：
 
 <!-- prettier-ignore -->
 ```html
 {{< img-lazy "16x9" "Alt text here" "test/example.png" >}}
 ```
 
-Not zoomable, not lazyloaded, optional ext link:
+不可放大，非 lazyload，可选外链：
 
 <!-- prettier-ignore -->
 ```html
 {{< img-nz "Alt text here" "test/example.png" >}}
 ```
 
-Not zoomable, lazyloaded, optional ext link:
+不可放大，lazyload，可选外链：
 
 <!-- prettier-ignore -->
 ```html
 {{< img-nz-lazy "16x9" "Alt text here" "test/example.png" >}}
 ```
 
-Available image aspect ratios:
+可用的占位符比例:
 
 - 40x9
 - 32x9
@@ -190,28 +188,28 @@ Available image aspect ratios:
 - 9x21
 - 9x32
 
-### ⚓ Markdown render hook
+### ⚓ Markdown 钩子
 
-You can create the files below in your site to adjust the markdown render hook, see [Hugo's Official Docs](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks).
+具体内容看 [Hugo's Official Docs](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks)，用于配置 Markdown 解释器。
 
-You can use `[SITEROOT]/layouts/_default/_markup/render-link.html` to decide whether or not links in the markdown content will open in new tab:
+比如你可以用 `[SITEROOT]/layouts/_default/_markup/render-link.html` 来修改文章里的链接是否在新页面打开：
 
 <!-- prettier-ignore -->
 ```html
 <a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text | safeHTML }}</a>
 ```
 
-### 📨 Comments area
+### 📨 评论区
 
-Theme supports Disqus, utterances and DisqusJS (for Mainland China user)。
+主题支持三种评论系统，Disqus、utterances 和 DisqusJS (给大陆用户的)。
 
-by default, disqus uses `{{ .Permalink }}` as `url`, `{{ .File.ContentBaseName }}` as `identifier`.
+对于 Disqus 默认情况下使用 `{{ .Permalink }}` 作为 `url`，使用 `{{ .File.ContentBaseName }}` 作为 `identifier`。
 
-Use the `[SITEROOT]/layouts/partials/comment-*.html` to cover `themes/fuji/layouts/partials/comment-*.html`. Then you can customize the url and identifier, or set multiple api key, add more settings for using DisqusJS. If you want to use DisqusJS, please remember to set `disqusJSApi` to anything in your `config.toml` to load CSS.
+使用 `[SITEROOT]/layouts/partials/comment-*.html` 来覆盖 `themes/fuji/layouts/partials/comment-*.html`。可在此文件内自定义指定的 url 和 identifier，或者为 DisqusJS 设置多个 api key 抑或是添加更多设置。注意如果使用 DisqusJS，将 `config.toml` 内的 `disqusJSApi` 解除注释来加载 CSS。
 
-### 🔧 Custom stylesheet configuration
+### 🔧 自定义 CSS
 
-> Hugo extended version needed.
+> 需要 Hugo Extended Version。
 
 You can override theme's internal SCSS variables with your own. Create `[SITEROOT]/assets/scss/_custom_var.scss` to cover variables in SCSS.
 
@@ -246,9 +244,9 @@ $dark-color-codebg: #414449; // GitHub
 
 To override SCSS rules, create `[SITEROOT]/assets/scss/_custom_rules.scss`. This file will have priority over anything regarding CSS rules, but is useless for changing variables that are used elsewhere in the theme.
 
-## ✏️ Issue and contributing
+## 👓 批判一番和贡献代码
 
-Feel free to use the [issue tracker](https://github.com/dsrkafuu/hugo-theme-fuji/issues). The theme has only been fully tested on Firefox, so if there are some problems when accessing with Chrome or others please also report an issue.
+[Issue](https://github.com/dsrkafuu/hugo-theme-fuji/issues)。主题本身只在 Firefox 上完整测试过，因此要是遇到了什么问题也可以随便批判。
 
 ## 📝 License
 
