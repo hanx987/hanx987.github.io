@@ -4,5 +4,4 @@
 - My First Blog
 - Wait On The List
 - Still Learning 😊
-- Comeback Soon 👍😎🎉
 ```
